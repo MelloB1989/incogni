@@ -1,6 +1,7 @@
 <?php 
 //$feedback_txt = $_POST['suggestion'];
 $conn = mysqli_connect("localhost", "mumbai","Mellob1989@", "temp"); 
+//PUT YOUR MYSQL DB CREDENTIALS HERE, THESE CREDENTIALS ARE JUST EXAMPLE.
 $feedback_txt = $conn->real_escape_string($_POST['suggestion']); 
 $query = "insert into feedback(feedback)values('".$feedback_txt."')"; 
 $result = mysqli_query($conn, $query);
